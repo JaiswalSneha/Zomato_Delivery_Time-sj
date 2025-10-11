@@ -155,4 +155,6 @@ if flag == 0:
         with st.spinner("Predicting..."):
             time.sleep(2)  # simulate delay
             y_pred = best_model_object.predict(input_data)
-            st.success(f"The predicted delivery time is **{y_pred[0]:.2f} minutes**")
+            lower_y_pred = y_pred[0]-2
+            upper_y_pred = y_pred[0]+2
+            st.success(f"The predicted delivery time is **{np.round(lower_y_pred,2)} - {np.round(upper_y_pred,2)} minutes**")
