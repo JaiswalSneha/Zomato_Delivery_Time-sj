@@ -136,8 +136,8 @@ st.markdown("""
     <div class='content'>
         The app's UI is intentionally minimal. Since Streamlit is focused more on data apps than design-heavy interfaces, the layout may not look like a modern web app — and that’s okay!
         <br><br>
-        Our main goal was to provide a <strong>functional, data-focused experience</strong> rather than a flashy frontend. 
-        We used basic HTML formatting (with assistance from ChatGPT) to enhance readability without overcomplicating the structure.
+        My main goal was to provide a <strong>functional, data-focused experience</strong> rather than a flashy frontend. 
+        I used basic HTML formatting (with assistance from ChatGPT) to enhance readability without overcomplicating the structure.
     </div>
 </div>
 """, unsafe_allow_html=True)
