@@ -2,8 +2,8 @@ import pandas as pd
 import numpy as np
 import streamlit as st
 st.set_page_config(layout="wide")
-sys.path.append(os.path.dirname(__file__))
 import sys
+sys.path.append(os.path.dirname(__file__))
 import os
 from pathlib import Path
 # from pages import loc_cal
