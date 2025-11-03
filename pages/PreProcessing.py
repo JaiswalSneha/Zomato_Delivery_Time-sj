@@ -199,9 +199,9 @@ st.markdown("---")
 st.subheader('Checking the distribution and spread of data')
 col1, col2 = st.columns(2)
 with col1:
-    st.text('With Invalid data')
-    st.dataframe(data.describe())
-with col2:
+#     st.text('With Invalid data')
+#     st.dataframe(data.describe())
+# with col2:
     st.text('After removal of Invalid data')
     st.dataframe(df.describe())
     st.markdown("<small>After removal of invalid rows the mean distance reduced from 99km to 9km, and the standard deviation reduced from 1099km to 5km</small>", unsafe_allow_html=True)
