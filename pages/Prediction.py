@@ -111,6 +111,7 @@ if flag == 0:
         if weather is not None:
             st.text(f"The weather is {weather} in your area")
             st.text(f"Please select the weather else your default weather is {safe_weather}")
+            st.text(f"The distance is {distance}")
     
     if distance_yes_no == 'Wish to enter the Longitude and Latitude':
         with col11:
@@ -132,7 +133,7 @@ if flag == 0:
             distance=3        
         else:
             distance=4
-        
+        st.text(f"The distance is {distance}")
 
     input_data = pd.DataFrame([{
         'age':age,
