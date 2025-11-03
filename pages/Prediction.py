@@ -102,11 +102,11 @@ if flag == 0:
         if distance_from_loc is None:
             distance_from_loc=0
             
-        detected_weather = get_weather_category(src_lat, src_lon)
-        if detected_weather in weather_options:
-            weather = detected_weather
-        else:
-            weather = safe_weather
+        # detected_weather = get_weather_category(src_lat, src_lon)
+        # if detected_weather in weather_options:
+        #     weather = detected_weather
+        # else:
+        #     weather = safe_weather
 
         
         if distance_from_loc<4:
@@ -119,11 +119,11 @@ if flag == 0:
             distance=3        
         else:
             distance=4
-        weather = get_weather_category(src_lat,src_lon)
-        if weather is not None:
-            st.text(f"The weather is {weather} in your area")
-            st.text(f"Please select the weather else your default weather is {safe_weather}")
-            st.text(f"The distance is {distance}")
+        # weather = get_weather_category(src_lat,src_lon)
+        # if weather is not None:
+        #     st.text(f"The weather is {weather} in your area")
+        #     st.text(f"Please select the weather else your default weather is {safe_weather}")
+        #     st.text(f"The distance is {distance}")
     
     if distance_yes_no == 'Wish to enter the Longitude and Latitude':
         with col11:
