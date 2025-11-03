@@ -99,13 +99,13 @@ if flag == 0:
         if distance_from_loc is None:
             distance_from_loc=0
             
-        # detected_weather = get_weather_category(src_lat, src_lon)
-        # if detected_weather in weather_options:
-        #     weather = detected_weather
-        #     st.text(f"The weather is {weather} in your area")
-        # else:
-        #     weather = safe_weather
-        #     st.text(f"Using default weather: {weather}")
+        detected_weather = get_weather_category(src_lat, src_lon)
+        if detected_weather in weather_options:
+            weather = detected_weather
+            st.text(f"The weather is {weather} in your area")
+        else:
+            weather = safe_weather
+            st.text(f"Using default weather: {weather}")
 
         
         if distance_from_loc<4:
