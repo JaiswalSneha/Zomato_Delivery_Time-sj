@@ -64,15 +64,17 @@ if flag == 0:
     with col1:
         city = st.selectbox('Type of City', np.unique(df['city']))
     with col2:
-        weather = st.selectbox('Weather', np.unique(df['weather_group']))
+        weather_options = np.unique(df['weather_group'])
+        default_index = 0
+        weather = st.selectbox('Weather', options=weather_options, index=default_index)
         safe_weather = weather
 
-    distance = 0
+    # distance = 0
     col1, col2 = st.columns(2)
     
     with col1:
         traffic_map_dic = {'Low': 1, 'Medium': 2, 'High': 3,'Jam':4}
-        traffic = st.selectbox('Traffic flow', ['Low','Medium','High','Jam'])
+        traffic = st.selectbox('Traffic flow', ['Low','Medium','High','Jam'],index=0)
         traffic = traffic_map_dic[traffic]
     with col2:
         bike_speed = st.number_input('Speed of the Bike', min_value=20.00, max_value=60.00)
