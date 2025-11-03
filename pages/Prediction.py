@@ -1,13 +1,15 @@
 import pandas as pd
 import numpy as np
 import streamlit as st
+st.set_page_config(layout="wide")
+sys.path.append(os.path.dirname(__file__))
 import sys
 import os
 from pathlib import Path
-from pages import loc_cal
-st.set_page_config(layout="wide")
-sys.path.append(os.path.dirname(__file__))
-from loc_cal import haversine_deg,get_weather_category
+# from pages import loc_cal
+
+# from loc_cal import haversine_deg,get_weather_category
+from pages.loc_cal import haversine_deg, get_weather_category
 from location import location_selector
 import time
 from sklearn.metrics import mean_squared_error,r2_score
