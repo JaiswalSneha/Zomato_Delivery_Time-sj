@@ -3,9 +3,9 @@ import numpy as np
 import streamlit as st
 st.set_page_config(layout="wide")
 import sys
-sys.path.append(os.path.dirname(__file__))
 import os
 from pathlib import Path
+sys.path.append(os.path.dirname(__file__))
 # from pages import loc_cal
 
 # from loc_cal import haversine_deg,get_weather_category
