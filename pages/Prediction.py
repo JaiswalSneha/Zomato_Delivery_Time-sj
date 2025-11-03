@@ -85,6 +85,7 @@ if flag == 0:
     col1, col2 = st.columns(2)
     with col1:
         distance_yes_no = st.selectbox('Do you have the distance?',['', 'Yes', 'No', 'Wish to enter the Longitude and Latitude'], )
+        distance = 0  # default value
     with col2:
         pass
 
