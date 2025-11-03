@@ -48,7 +48,8 @@ num_col = ['multiple_deliveries','age','distance_bin_map','traffic_bin','speed']
 
 preprocessor = ColumnTransformer(
     transformers = [
-    ('categorical',OneHotEncoder(drop= 'first'),cat_col),
+    # ('categorical',OneHotEncoder(drop= 'first'),cat_col),
+    ('categorical', OneHotEncoder(drop='first', handle_unknown='ignore'), cat_col),
     ('numerical',StandardScaler(),num_col),
 ],    remainder='passthrough'
 )
