@@ -65,6 +65,7 @@ if flag == 0:
         city = st.selectbox('Type of City', np.unique(df['city']))
     with col2:
         weather = st.selectbox('Weather', np.unique(df['weather_group']))
+        
 
     distance = 0
     col1, col2 = st.columns(2)
@@ -109,7 +110,8 @@ if flag == 0:
         weather = get_weather_category(src_lat,src_lon)
         if weather is not None:
             st.text(f"The weather is {weather} in your area")
-
+            weather = st.selectbox('Weather', np.unique(df['weather_group']))
+            st.text(f"Please select the weather else your default weather is {weather}")
     
     if distance_yes_no == 'Wish to enter the Longitude and Latitude':
         with col11:
